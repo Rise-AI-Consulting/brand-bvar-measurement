@@ -1,0 +1,11 @@
+{
+  "stage1_base_rmse": 0.028346388656941283,
+  "stage1_base_correlation": 0.9516095835860018,
+  "max_rhat_selected": 1.0,
+  "min_ess_bulk_selected": 438.0,
+  "draws": 250,
+  "tune": 500,
+  "chains": 2,
+  "pymc_marketing_feature": "MMM(time_varying_intercept=True, model_config={'intercept_tvp_config': HSGPKwargs(...)})",
+  "docs": "https://www.pymc-marketing.io/en/latest/notebooks/mmm/mmm_time_varying_media_example.html"
+}

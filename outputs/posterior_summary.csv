@@ -1,0 +1,28 @@
+,mean,sd,hdi_3%,hdi_97%,mcse_mean,mcse_sd,ess_bulk,ess_tail,r_hat
+intercept[base_sales],0.058,0.019,0.024,0.094,0.0,0.0,3282.0,2621.0,1.0
+intercept[awareness],0.035,0.026,-0.015,0.083,0.0,0.0,3793.0,2796.0,1.0
+intercept[consideration],0.017,0.022,-0.023,0.06,0.0,0.0,4502.0,2482.0,1.0
+"A[1, base_sales, base_sales]",0.7,0.055,0.594,0.802,0.001,0.001,2938.0,2380.0,1.0
+"A[1, base_sales, awareness]",0.14,0.047,0.052,0.225,0.001,0.001,4884.0,2113.0,1.0
+"A[1, base_sales, consideration]",0.125,0.057,0.02,0.229,0.001,0.001,3875.0,2720.0,1.0
+"A[1, awareness, base_sales]",0.001,0.062,-0.107,0.128,0.001,0.001,4305.0,2685.0,1.0
+"A[1, awareness, awareness]",0.587,0.067,0.461,0.708,0.001,0.001,4773.0,2492.0,1.0
+"A[1, awareness, consideration]",0.028,0.069,-0.106,0.156,0.001,0.001,4652.0,2887.0,1.0
+"A[1, consideration, base_sales]",0.073,0.059,-0.031,0.189,0.001,0.001,4064.0,2555.0,1.0
+"A[1, consideration, awareness]",0.083,0.055,-0.018,0.19,0.001,0.001,4827.0,2285.0,1.0
+"A[1, consideration, consideration]",0.69,0.072,0.557,0.827,0.001,0.001,4146.0,2782.0,1.0
+"B[base_sales, brand_media]",0.0,0.0,-0.0,0.0,0.0,,3200.0,3200.0,
+"B[awareness, brand_media]",0.176,0.019,0.139,0.212,0.0,0.0,5745.0,2518.0,1.0
+"B[consideration, brand_media]",0.082,0.017,0.051,0.114,0.0,0.0,6370.0,2120.0,1.0
+residual_sigma[base_sales],0.124,0.01,0.105,0.143,0.0,0.0,5812.0,2456.0,1.0
+residual_sigma[awareness],0.177,0.014,0.152,0.205,0.0,0.0,4769.0,2133.0,1.0
+residual_sigma[consideration],0.151,0.012,0.128,0.173,0.0,0.0,4471.0,2353.0,1.0
+"residual_corr[base_sales, base_sales]",1.0,0.0,1.0,1.0,0.0,,3200.0,3200.0,
+"residual_corr[base_sales, awareness]",0.01,0.107,-0.181,0.213,0.001,0.002,5589.0,2738.0,1.0
+"residual_corr[base_sales, consideration]",0.098,0.11,-0.105,0.299,0.001,0.002,6654.0,2522.0,1.0
+"residual_corr[awareness, base_sales]",0.01,0.107,-0.181,0.213,0.001,0.002,5589.0,2738.0,1.0
+"residual_corr[awareness, awareness]",1.0,0.0,1.0,1.0,0.0,0.0,3138.0,3177.0,1.0
+"residual_corr[awareness, consideration]",0.266,0.1,0.068,0.439,0.001,0.002,5013.0,2426.0,1.0
+"residual_corr[consideration, base_sales]",0.098,0.11,-0.105,0.299,0.001,0.002,6654.0,2522.0,1.0
+"residual_corr[consideration, awareness]",0.266,0.1,0.068,0.439,0.001,0.002,5013.0,2426.0,1.0
+"residual_corr[consideration, consideration]",1.0,0.0,1.0,1.0,0.0,0.0,2899.0,3200.0,1.0

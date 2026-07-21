@@ -1,0 +1,74 @@
+{
+  "diagnostics": {
+    "max_rhat": 1.0,
+    "min_ess_bulk": 2899.0,
+    "draws": 800,
+    "tune": 800,
+    "chains": 4,
+    "variables": [
+      "base_sales",
+      "awareness",
+      "consideration"
+    ],
+    "exog": [
+      "brand_media"
+    ],
+    "lags": 1,
+    "residual_covariance": "LKJCholeskyCov",
+    "max_posterior_abs_eigenvalue_q50": 0.8041459368246513,
+    "max_posterior_abs_eigenvalue_q95": 0.8914993683128372,
+    "share_stable_draws": 1.0
+  },
+  "cumulative_base_lift": [
+    {
+      "through_month": 1,
+      "cumulative_base_std_mean": 0.0,
+      "cumulative_base_std_q05": 0.0,
+      "cumulative_base_std_q50": 0.0,
+      "cumulative_base_std_q95": 0.0,
+      "incremental_base_sales_mean": 0.0,
+      "incremental_base_sales_q05": 0.0,
+      "incremental_base_sales_q95": 0.0
+    },
+    {
+      "through_month": 6,
+      "cumulative_base_std_mean": 0.22204575877219168,
+      "cumulative_base_std_q05": 0.141695458102636,
+      "cumulative_base_std_q50": 0.21983983308141325,
+      "cumulative_base_std_q95": 0.307937503238315,
+      "incremental_base_sales_mean": 39968.2365789945,
+      "incremental_base_sales_q05": 25505.182458474483,
+      "incremental_base_sales_q95": 55428.7505828967
+    },
+    {
+      "through_month": 12,
+      "cumulative_base_std_mean": 0.3690050865904491,
+      "cumulative_base_std_q05": 0.22739198826556295,
+      "cumulative_base_std_q50": 0.3605795108287535,
+      "cumulative_base_std_q95": 0.537140190191932,
+      "incremental_base_sales_mean": 66420.91558628084,
+      "incremental_base_sales_q05": 40930.55788780133,
+      "incremental_base_sales_q95": 96685.23423454777
+    },
+    {
+      "through_month": 24,
+      "cumulative_base_std_mean": 0.43544970936275673,
+      "cumulative_base_std_q05": 0.25039165574862965,
+      "cumulative_base_std_q50": 0.41650429203038086,
+      "cumulative_base_std_q95": 0.689265229266896,
+      "incremental_base_sales_mean": 78380.94768529621,
+      "incremental_base_sales_q05": 45070.498034753335,
+      "incremental_base_sales_q95": 124067.74126804128
+    },
+    {
+      "through_month": 36,
+      "cumulative_base_std_mean": 0.4458115023968537,
+      "cumulative_base_std_q05": 0.2523930064872835,
+      "cumulative_base_std_q50": 0.4224988903651593,
+      "cumulative_base_std_q95": 0.7273717099324497,
+      "incremental_base_sales_mean": 80246.07043143366,
+      "incremental_base_sales_q05": 45430.741167711036,
+      "incremental_base_sales_q95": 130926.90778784094
+    }
+  ]
+}

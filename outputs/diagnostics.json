@@ -1,0 +1,20 @@
+{
+  "max_rhat": 1.0,
+  "min_ess_bulk": 2899.0,
+  "draws": 800,
+  "tune": 800,
+  "chains": 4,
+  "variables": [
+    "base_sales",
+    "awareness",
+    "consideration"
+  ],
+  "exog": [
+    "brand_media"
+  ],
+  "lags": 1,
+  "residual_covariance": "LKJCholeskyCov",
+  "max_posterior_abs_eigenvalue_q50": 0.8041459368246513,
+  "max_posterior_abs_eigenvalue_q95": 0.8914993683128372,
+  "share_stable_draws": 1.0
+}

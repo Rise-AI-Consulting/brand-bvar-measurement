@@ -1,0 +1,21 @@
+Create a clean editorial infographic for a technical blog post about long-term brand measurement.
+
+Style: modern technical schematic, white/off-white background, subtle PyMC blue/green accents, crisp vector look, minimal text, not corporate clip art, no 3D, no photorealism. It should look like an explanatory diagram in a serious data science article.
+
+Aspect ratio: 16:9 landscape.
+
+Title text: "Two Layers Before the Brand System"
+
+Layout: two stacked horizontal layers with a clear downward arrow from Layer 1 to Layer 2, then a small arrow leading to a third small label on the right: "BVARX brand dynamics".
+
+Layer 1 heading: "Layer 1: Short-term response"
+Small labels inside layer 1: "MMM", "direct sales", "adstock", "saturation", "pricing", "promotions", "seasonality".
+Visual metaphor: observed sales line with short spikes, small channel icons, response curve.
+
+Layer 2 heading: "Layer 2: Base extraction"
+Small labels inside layer 2: "unexplained demand", "time-varying intercept", "HSGP prior", "evolving base sales".
+Visual metaphor: noisy sales line being separated into a smooth latent base curve.
+
+Right-side small callout: "Then model how base sales, awareness, consideration, and media move together over time."
+
+Important: render the text accurately and sparingly. Keep labels large enough to read. No extra words. No fake equations. No logos.
