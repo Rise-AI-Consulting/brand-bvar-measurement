@@ -43,6 +43,15 @@
 - **Supported claim:** The generic PyMC BVARX builder converts a one-standard-deviation brand-media shock into posterior impulse responses for base sales, awareness, and consideration, with uncertainty intervals.
 - **Caveat:** The impulse response is conditional on the simulated DGP, the model structure, the direct-effect mask, and exogeneity of the shock.
 
+## `figures/bvecm-cointegration-demo.png`
+
+- **Type:** Empirical synthetic Bayesian VECM / CVAR contrast figure.
+- **Source data:** `outputs/bvecm_synthetic_data.csv`, `outputs/bvecm_cointegration_summary.csv`, and `outputs/bvecm_diagnostics.json`.
+- **Generating script:** `experiments/bvecm_cointegration_demo.py`, function `plot_results`.
+- **Command:** `cd experiments && uv run --project . bvecm_cointegration_demo.py`.
+- **Supported claim:** A Bayesian VECM models changes using a long-run equilibrium error term. In the synthetic demo, the level variables drift together while the equilibrium error remains mean-reverting; the posterior-mean equilibrium error tracks the known synthetic truth.
+- **Caveat:** This is a small synthetic contrast that tests the implementation mechanics. It is not a production cointegration testing workflow and not a reproduction of Cain's full empirical CVAR.
+
 ## `figures/long-term-base-uplift.png`
 
 - **Type:** Empirical model-output figure.

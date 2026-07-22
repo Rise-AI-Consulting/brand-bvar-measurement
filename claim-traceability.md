@@ -52,27 +52,36 @@
 16. **Claim:** All posterior companion-matrix draws were stable; the 95th percentile of the largest absolute eigenvalue was 0.89.
    - **Support:** `outputs/diagnostics.json`.
 
+17. **Claim:** A Bayesian VECM / CVAR works in first differences and adds a long-run equilibrium error term, while the main BVARX example works in levels.
+   - **Support:** `experiments/bvecm_cointegration_demo.py`, especially `fit_bvecm`, where `equilibrium_error = y_level_lag @ beta_vec` enters the mean for `dy_now` through `alpha`.
+
+18. **Claim:** In the synthetic Bayesian VECM demo, the true cointegration relationship is `base = 0.65 * awareness + 0.35 * consideration`; posterior means recovered about `0.69` and `0.36`, with max R-hat 1.00 and minimum bulk ESS 1,897.
+   - **Support:** `outputs/bvecm_synthetic_truth.json`, `outputs/bvecm_cointegration_summary.csv`, `outputs/bvecm_diagnostics.json`, and `outputs/bvecm-run-log.json`.
+
 ## Numerical blog claims
 
-17. **Claim:** First-month base-sales lift is zero by design because direct media-to-base effect is fixed at zero.
+19. **Claim:** First-month base-sales lift is zero by design because direct media-to-base effect is fixed at zero.
    - **Support:** `outputs/long_term_uplift_summary.csv`, row `through_month=1`; `outputs/synthetic_truth.json`.
 
-18. **Claim:** Through 12 months, mean cumulative base-sales lift was about 66,000.
+20. **Claim:** Through 12 months, mean cumulative base-sales lift was about 66,000.
    - **Support:** `outputs/long_term_uplift_summary.csv`, row `through_month=12`.
 
-19. **Claim:** Through 36 months, mean cumulative base-sales lift was about 80,000 with 90% posterior interval from about 45,000 to 131,000.
+21. **Claim:** Through 36 months, mean cumulative base-sales lift was about 80,000 with 90% posterior interval from about 45,000 to 131,000.
    - **Support:** `outputs/long_term_uplift_summary.csv`, row `through_month=36`.
 
 ## Figure claims
 
-20. **Claim:** Synthetic data figure shows brand media, extracted base sales, awareness, and consideration over time.
+22. **Claim:** Synthetic data figure shows brand media, extracted base sales, awareness, and consideration over time.
    - **Support:** `figures/synthetic-brand-system.png`; `outputs/synthetic_brand_data.csv`; `figure-manifest.md`.
 
-21. **Claim:** True-vs-estimated IRF figure shows synthetic recovery against known truth.
+23. **Claim:** True-vs-estimated IRF figure shows synthetic recovery against known truth.
    - **Support:** `figures/true-vs-estimated-irf.png`; `outputs/posterior_irf.csv`; `outputs/true_irf.csv`; `figure-manifest.md`.
 
-22. **Claim:** IRF figure shows posterior impulse responses and 90% intervals.
+24. **Claim:** IRF figure shows posterior impulse responses and 90% intervals.
    - **Support:** `figures/bvar-impulse-response.png`; `outputs/posterior_irf.csv`; `figure-manifest.md`.
 
-23. **Claim:** Cumulative uplift figure shows long-term base-sales lift at selected horizons.
+25. **Claim:** Cumulative uplift figure shows long-term base-sales lift at selected horizons.
    - **Support:** `figures/long-term-base-uplift.png`; `outputs/long_term_uplift_summary.csv`; `figure-manifest.md`.
+
+26. **Claim:** Bayesian VECM figure shows non-stationary synthetic brand states drifting together and the estimated equilibrium error tracking the true error.
+   - **Support:** `figures/bvecm-cointegration-demo.png`, `outputs/bvecm_synthetic_data.csv`, and `outputs/bvecm_cointegration_summary.csv`.
