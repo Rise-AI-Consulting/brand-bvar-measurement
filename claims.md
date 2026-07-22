@@ -14,7 +14,6 @@ The repository implements a simplified synthetic two-stage teaching example:
 
 1. A PyMC-Marketing MMM with a time-varying intercept using an HSGP prior recovers an evolving weekly baseline from simulated observed sales.
 2. A generic PyMC BVARX models monthly dynamics among extracted base sales, awareness, consideration, and exogenous brand media.
-3. A separate Bayesian VECM demo simulates cointegrated brand states and estimates the long-run equilibrium relationship to show how CVAR logic differs from stationary BVARX logic.
 
 The second-stage model estimates:
 
@@ -31,4 +30,3 @@ where `y_t` contains extracted base sales, awareness, and consideration, and `x_
 - It does not prove brand media is causal from observational data.
 - It does not implement Cain's full first-stage UCM/DLM. The Stage 1 script is a compact synthetic PyMC-Marketing HSGP baseline demonstration.
 - It does not propagate first-stage posterior uncertainty into the second-stage BVARX. The stages are shown modularly for clarity.
-- The Bayesian VECM demo is a small synthetic contrast, not a full Cain reproduction or a production cointegration testing workflow.
