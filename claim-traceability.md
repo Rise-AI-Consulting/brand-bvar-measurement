@@ -3,22 +3,22 @@
 ## Source/method claims
 
 1. **Claim:** Classical MMM is useful for short-term marketing effects but can miss long-term brand effects when measured only against short-term sales.
-   - **Support:** 1749 source text, `sources/1749-long-term-marketing.txt`, paragraphs under "Classical MMM".
+   - **Support:** Cain paper framing in the public IJRM PDF, especially the two-step framework and commercial MMM discussion, plus the synthetic Stage 1/Stage 2 design documented in `analysis-contract.md` and implemented in `experiments/pymc_marketing_gp_baseline.py` and `experiments/brand_bvar_simulation.py`.
 
 2. **Claim:** Cain proposes a two-step framework: short-term UCM/DLM-style path-to-purchase modeling and long-term VAR/CVAR brand-building modeling.
-   - **Support:** `paper.txt` lines 92-105 state the two-step framework and use of a parsimonious VAR on extracted trend, mindset metrics, paid and earned media.
+   - **Support:** Cain IJRM PDF states the two-step framework and use of a parsimonious VAR on extracted trend, mindset metrics, paid and earned media.
 
 3. **Claim:** Base sales and attitudinal metrics are treated as brand-health signals, and observed sales can contaminate long-term movement with short-term effects.
-   - **Support:** `paper.txt` lines 83-90.
+   - **Support:** Cain IJRM PDF discussion of mindset metrics and observed sales contamination.
 
 4. **Claim:** Cain's application found online paid media such as search/display was short-term while offline paid media, in-store marketing, and new product PR contributed to long-term brand loyalty.
-   - **Support:** `paper.txt` lines 155-163 and 1179-1188.
+   - **Support:** Cain IJRM PDF application summary and managerial implications sections.
 
 5. **Claim:** Cain notes practical use in commercial MMM settings with two to three years of longitudinal time-series data.
-   - **Support:** `paper.txt` lines 113-114 and 1190-1195.
+   - **Support:** Cain IJRM PDF introduction and managerial implications sections.
 
 6. **Claim:** Cain's paper used a cointegrated VAR / CVAR structure, not the simpler stationary BVARX in this post.
-   - **Support:** `paper.txt` lines 697-738.
+   - **Support:** Cain IJRM PDF VAR/CVAR model specification section.
 
 ## Implementation claims
 

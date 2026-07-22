@@ -4,23 +4,29 @@
 
 Cain (2021/2022 IJRM) argues that marketing effectiveness needs a two-step structure: first isolate short-term transactional effects and a long-term base-sales component with unobserved-component style models, then model the long-term brand-building system using mindset metrics, earned media, paid media, and extracted base sales. The paper's core claim is that mindset metrics only become credible brand-building evidence when they are connected to persistent base-sales evolution, rather than merely correlated with observed short-term sales.
 
-## 1749 blog claim reused
+## Practitioner framing used in the post
 
-The 1749 post makes the same practitioner point in simpler MMM language: a classical sales MMM usually measures short-term response and tends to undervalue brand marketing when the brand effect mainly appears through an evolving base. It proposes estimating an evolving base, then fitting a Bayesian VAR, meaning Bayesian Vector Autoregression, over the extracted base and brand metrics to compute impulse responses and long-term ROI.
+A short-term sales MMM is useful, but it can undervalue brand marketing when the relevant effect is a slow change in base demand. The post uses that practitioner framing and then makes the mechanism executable: estimate an evolving base, feed that base into a brand-system model, and compute dynamic responses instead of forcing all media value into same-week sales attribution.
 
 ## What this implementation tests
 
-This post implements the second-stage idea with a PyMC Bayesian VAR on synthetic monthly data. The synthetic data represents the state after a first-stage MMM/UCM has already extracted base sales. The model estimates:
+The repository implements a simplified synthetic two-stage teaching example:
 
-\[
+1. A PyMC-Marketing MMM with a time-varying intercept using an HSGP prior recovers an evolving weekly baseline from simulated observed sales.
+2. A generic PyMC BVARX models monthly dynamics among extracted base sales, awareness, consideration, and exogenous brand media.
+
+The second-stage model estimates:
+
+$$
 y_t = c + A y_{t-1} + B x_t + \epsilon_t
-\]
+$$
 
-where `y_t` contains extracted base sales, awareness, and consideration, and `x_t` is exogenous brand media.
+where `y_t` contains extracted base sales, awareness, and consideration, and `x_t` is exogenous brand media. The same-month media-to-base-sales coefficient is blocked by an explicit direct-effect mask, so base sales moves through lagged brand dynamics in the synthetic example.
 
 ## What it does not claim
 
 - It does not reproduce Cain's full commercial case study.
 - It does not implement the paper's cointegrated VAR / error-correction system.
 - It does not prove brand media is causal from observational data.
-- It does not estimate the first-stage MMM/UCM. The blog explains where that stage sits and focuses the executable code on the PyMC BVAR stage.
+- It does not implement Cain's full first-stage UCM/DLM. The Stage 1 script is a compact synthetic PyMC-Marketing HSGP baseline demonstration.
+- It does not propagate first-stage posterior uncertainty into the second-stage BVARX. The stages are shown modularly for clarity.

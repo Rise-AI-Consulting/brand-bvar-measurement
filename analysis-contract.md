@@ -6,10 +6,10 @@ Monthly brand-system observations after the first-stage MMM/UCM has extracted an
 
 ## Immutable source artifacts
 
-- `paper.pdf` and `paper.txt`: Cain, P.M. "Modelling short-and long-term marketing effects in the consumer purchase journey," IJRM 39 (2022) 96-116, available online 24 June 2021.
-- `sources/1749-long-term-marketing.txt`: browser-captured text from the 1749 blog post supplied by Luca.
-- `experiments/brand_bvar_simulation.py`: full reproducible simulation and PyMC BVAR fit.
-- `outputs/*.csv`, `outputs/*.json`, `outputs/*.nc`: generated model outputs.
+- Cain, P.M. "Modelling short-and long-term marketing effects in the consumer purchase journey," IJRM 39 (2022) 96-116, available online 24 June 2021. Public PDF: https://market.science/wp-content/uploads/Modelling-short-and-long-term-effects_IJRM-2021.pdf
+- `experiments/pymc_marketing_gp_baseline.py`: synthetic PyMC-Marketing HSGP baseline extraction demonstration.
+- `experiments/brand_bvar_simulation.py`: full reproducible simulation and PyMC BVARX fit.
+- `outputs/*.csv`, `outputs/*.json`: generated model outputs.
 - `figures/*.png`: generated figures.
 
 ## Modeling boundary
