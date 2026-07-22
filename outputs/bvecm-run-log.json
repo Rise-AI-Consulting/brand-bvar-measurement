@@ -1,1 +1,1 @@
-{"diagnostic_scope": "intercept, beta_brand, alpha, gamma, media_effect, residual_sigma", "divergences": 0, "max_r_hat": 1.01, "min_ess_bulk": 1897, "draws": 600, "tune": 600, "chains": 4, "beta_awareness_mean": 0.686, "beta_consideration_mean": 0.356, "alpha_base_sales_mean": -0.334}
+{"max_r_hat": 1.0, "min_ess_bulk": 1897, "draws": 600, "tune": 600, "chains": 4, "beta_awareness_mean": 0.686, "beta_consideration_mean": 0.356, "alpha_base_sales_mean": -0.334}

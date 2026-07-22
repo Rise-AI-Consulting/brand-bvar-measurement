@@ -1,7 +1,5 @@
 {
-  "diagnostic_scope": "intercept, beta_brand, alpha, gamma, media_effect, residual_sigma",
-  "divergences": 0,
-  "max_r_hat": 1.01,
+  "max_r_hat": 1.0,
   "min_ess_bulk": 1897,
   "draws": 600,
   "tune": 600,
