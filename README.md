@@ -58,4 +58,4 @@ media_effect = pm.Normal("media_effect", mu=np.array([0.0, 0.07, 0.04]), sigma=0
 mu = intercept + ect[:, None] * alpha[None, :] + pt.dot(dy_lag, gamma.T) + x_now * media_effect
 ```
 
-In the synthetic run the true cointegration relationship is `base = 0.65 * awareness + 0.35 * consideration`. The Bayesian VECM posterior recovered approximately `0.69` and `0.36`, with max R-hat `1.00` and min bulk ESS `1,897`.
+In the synthetic run the true cointegration relationship is `base = 0.65 * awareness + 0.35 * consideration`. The Bayesian VECM posterior recovered approximately `0.69` and `0.36`; across the core reported coefficients there were zero divergences, max R-hat was `1.01`, and min bulk ESS was `1,897`.

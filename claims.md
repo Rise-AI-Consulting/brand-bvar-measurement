@@ -27,7 +27,7 @@ where `y_t` contains extracted base sales, awareness, and consideration, and `x_
 ## What it does not claim
 
 - It does not reproduce Cain's full commercial case study.
-- It does not implement the paper's cointegrated VAR / error-correction system.
+- It does not implement Cain's full empirical cointegrated VAR / error-correction workflow.
 - It does not prove brand media is causal from observational data.
 - It does not implement Cain's full first-stage UCM/DLM. The Stage 1 script is a compact synthetic PyMC-Marketing HSGP baseline demonstration.
 - It does not propagate first-stage posterior uncertainty into the second-stage BVARX. The stages are shown modularly for clarity.

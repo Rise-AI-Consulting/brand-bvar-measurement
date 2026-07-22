@@ -55,7 +55,7 @@
 17. **Claim:** A Bayesian VECM / CVAR works in first differences and adds a long-run equilibrium error term, while the main BVARX example works in levels.
    - **Support:** `experiments/bvecm_cointegration_demo.py`, especially `fit_bvecm`, where `equilibrium_error = y_level_lag @ beta_vec` enters the mean for `dy_now` through `alpha`.
 
-18. **Claim:** In the synthetic Bayesian VECM demo, the true cointegration relationship is `base = 0.65 * awareness + 0.35 * consideration`; posterior means recovered about `0.69` and `0.36`, with max R-hat 1.00 and minimum bulk ESS 1,897.
+18. **Claim:** In the synthetic Bayesian VECM demo, the true cointegration relationship is `base = 0.65 * awareness + 0.35 * consideration`; posterior means recovered about `0.69` and `0.36`, with zero divergences, max R-hat 1.01, and minimum bulk ESS 1,897 across the core reported coefficients.
    - **Support:** `outputs/bvecm_synthetic_truth.json`, `outputs/bvecm_cointegration_summary.csv`, `outputs/bvecm_diagnostics.json`, and `outputs/bvecm-run-log.json`.
 
 ## Numerical blog claims

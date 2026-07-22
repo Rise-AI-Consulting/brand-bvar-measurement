@@ -9,12 +9,13 @@ Monthly brand-system observations after the first-stage MMM/UCM has extracted an
 - Cain, P.M. "Modelling short-and long-term marketing effects in the consumer purchase journey," IJRM 39 (2022) 96-116, available online 24 June 2021. Public PDF: https://market.science/wp-content/uploads/Modelling-short-and-long-term-effects_IJRM-2021.pdf
 - `experiments/pymc_marketing_gp_baseline.py`: synthetic PyMC-Marketing HSGP baseline extraction demonstration.
 - `experiments/brand_bvar_simulation.py`: full reproducible simulation and PyMC BVARX fit.
+- `experiments/bvecm_cointegration_demo.py`: small synthetic Bayesian VECM / CVAR contrast used to show what changes when a long-run equilibrium error is estimated.
 - `outputs/*.csv`, `outputs/*.json`: generated model outputs.
 - `figures/*.png`: generated figures.
 
 ## Modeling boundary
 
-The executable example starts after base extraction. It assumes a short-term model has already removed price, promotion, seasonality, and direct media response from observed sales and produced an extracted base trend. This keeps the synthetic example focused on the long-term brand system.
+The executable example has three parts: a compact synthetic PyMC-Marketing baseline extraction demo, a stationary BVARX brand-system model for delayed impulse responses, and a separate Bayesian VECM contrast for long-run-equilibrium mechanics. The BVARX path assumes a short-term model has already removed price, promotion, seasonality, and direct media response from observed sales and produced an extracted base trend. The VECM path uses synthetic cointegrated brand states to test the implementation difference between level dynamics and error correction; it is not a production cointegration workflow.
 
 ## Decision-time information boundary
 
@@ -24,7 +25,7 @@ At month `t`, the BVAR uses only brand media at `t` and endogenous variables fro
 
 - Posterior impulse response by month after a one-standard-deviation brand media shock.
 - Cumulative base-sales lift through 1, 6, 12, 24, and 36 months.
-- MCMC diagnostics: maximum R-hat and minimum bulk ESS for model parameters.
+- MCMC diagnostics: maximum R-hat and minimum bulk ESS for BVARX parameters, plus divergence count and all-core-parameter R-hat/ESS for the Bayesian VECM contrast.
 
 ## Most likely failure modes and diagnostics
 

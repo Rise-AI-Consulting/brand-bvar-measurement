@@ -148,9 +148,13 @@ def fit_bvecm(y: np.ndarray, x: np.ndarray, *, draws: int = 600, tune: int = 600
 
 
 def summarize(idata) -> dict:
-    summary = az.summary(idata, var_names=["beta_brand", "alpha", "media_effect", "residual_sigma"])
+    core_var_names = ["intercept", "beta_brand", "alpha", "gamma", "media_effect", "residual_sigma"]
+    summary = az.summary(idata, var_names=core_var_names)
     summary.to_csv(OUT / "bvecm_posterior_summary.csv")
+    divergences = int(idata.sample_stats["diverging"].sum().item())
     diagnostics = {
+        "diagnostic_scope": "intercept, beta_brand, alpha, gamma, media_effect, residual_sigma",
+        "divergences": divergences,
         "max_r_hat": float(summary["r_hat"].max()),
         "min_ess_bulk": int(summary["ess_bulk"].min()),
         "draws": 600,
